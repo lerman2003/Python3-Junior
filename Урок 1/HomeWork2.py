@@ -1,6 +1,6 @@
 import turtle
 t = turtle.Pen()
-t.color("red","green")
+t.color("red")
 t.width(3)
 turtle.bgcolor("black")
 circle=int(turtle.numinput("Количество кругов","Сколько кругов нарисовать?",6,1,360))
