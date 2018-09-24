@@ -1,0 +1,13 @@
+a = float(input("Введите число a = "))
+b = float(input("Введите число b = "))
+
+if a>b:
+    a = a*2
+    b = b*2
+else:
+    a = a/2
+    b = b/2
+
+print("Число а = %.2f" %a)
+print("Число а = %.2f" %b)
+    
