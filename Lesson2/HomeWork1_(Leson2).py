@@ -1,6 +1,6 @@
-suma=float(input("Сума заказа?")) 
+suma=float(input("Сумма заказа?")) 
 tea=float(input("Сколько чая дадите нашим официантам?(Общее число)"))
-people=int(input("Сколько вас(количество человек)"))
+people=int(input("Сколько вас(колличество человек)"))
 sumageneral=suma+tea
 suma2=suma/people
 sumaeach1=suma/people+tea/people
