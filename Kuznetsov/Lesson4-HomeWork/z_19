@@ -1,0 +1,13 @@
+a = int(input("Ввдите а "))
+b = int(input("Ввдите b "))
+c = int(input("Ввдите c "))
+k = 0
+
+print("-----------")
+if a>0:
+    k+=a
+if b>0:
+    k+=b
+if c>0:
+    k+=c
+print("Сумма положительных чисел:",k)
