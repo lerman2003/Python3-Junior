@@ -1,0 +1,7 @@
+n = int(input("Введите целое число "))
+a = float(input("Введите вещественное число "))
+Sum = 0
+
+for i in range(1,n+1):
+    Sum=Sum*a
+print(Sum)
