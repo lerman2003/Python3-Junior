@@ -1,0 +1,10 @@
+Основные переменные
+predpred = 1
+pred = 1
+#Решение
+for i in range(1,10):
+    ocher = predpred + pred
+    predpred = pred
+    pred = ocher
+    ocher = predpred + pred
+    print(ocher)
