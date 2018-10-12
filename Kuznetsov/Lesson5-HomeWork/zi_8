@@ -1,0 +1,13 @@
+n = 923451
+n1=n%900000
+print(n1)
+n2=n1%20000
+print(n2)
+n3=n2%3000
+print(n3)
+n4=n3%400
+print(n4)
+n5=n4%50
+print(n5)
+n6=n5-1
+print(n6)
