@@ -1,0 +1,12 @@
+m = float(input("Введите m(0.5<m<33.7): "))
+x = 1
+if 0.52<=m<=33.7:
+    while True:
+        y=(x**2+100)/(x+200)
+        x+=1
+        if 0.52<=y<m:
+            print("%.2f"%y)
+        if y>m:
+            break
+else:
+    print("Вы ввели m неправильно!")
