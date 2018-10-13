@@ -1,0 +1,10 @@
+a = float(input("Введите a(1<a<=1.5): "))
+n = 2
+if 1<a<=1.5:
+    while True:
+        ch=1+(1/n)
+        n+=1
+        if a<ch<=1.5:
+            print("%.2f"%ch)
+else:
+    print("Не правильно введенно значение a")
