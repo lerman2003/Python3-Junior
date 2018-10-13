@@ -1,0 +1,8 @@
+sum = 0
+print("(число 0-закончить ввод)")
+while True:
+    n = float(input("Введите вещественное число: "))
+    if n==0:
+        print("Кол-во чисел:",sum)
+        break
+    sum+=1
