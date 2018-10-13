@@ -1,4 +1,4 @@
-m = float(input("Введите m(0.5<m<33.7): "))
+m = float(input("Введите m(0.5<=m<=33.7): "))
 x = 1
 if 0.52<=m<=33.7:
     while True:
