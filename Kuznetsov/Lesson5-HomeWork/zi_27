@@ -1,0 +1,14 @@
+m = float(input("Введите m(0.5<m<1): "))
+n1 = 1
+n2 = 2
+if 0.5<m<1:
+    while True:
+        ch = n1/n2
+        if 0.5<ch<m:
+            print("%.2f"%ch)
+        n1+=1
+        n2+=1
+        if ch>m:
+            break
+else:
+    print("Неправильно введенно значение m")
