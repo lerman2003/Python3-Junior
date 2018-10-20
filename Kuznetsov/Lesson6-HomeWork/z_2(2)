@@ -1,0 +1,45 @@
+from random import randint
+import time
+
+player1=input("Введите имя первого игрока: ")
+player2=input("Введите имя второго игрока: ")
+r = int(input("Сколько раз будет проходить игра? "))
+y = int(input("сколько раз будет бросать кубик в игре каждый игрок? "))
+print("------------")
+
+n1 = 0
+n2 = 0
+vin1=0
+vin2=0
+nich=0
+for i in range(r):
+    for i in range(y):
+        print("Кубик бросает",player1)
+        time.sleep(3)
+        ch1=randint(1,6)
+        n1+=ch1
+        print("Выпало",ch1)
+        print("------------")
+
+        print("Кубик бросает",player2)
+        time.sleep(3)
+        ch2=randint(1,6)
+        n2+=ch2
+        print("Выпало",ch2)
+        print("------------")
+
+    if n1>n2:
+        print("Победил,",player1,"набравший:",n1,"очков")
+        vin1+=1
+    if n1<n2:
+        print("Победил,",player2,"набравший:",n2,"очков")
+        vin2+=1
+    if n1==n2:
+        print("Ничья!")
+        nich+=1
+    n1=0
+    n2=0
+    print("---------------")
+print("Игрок",player1,"выиграл(а)",vin1,"раз(а)")
+print("Игрок",player2,"выиграл(а)",vin2,"раз(а)")
+print("Ничья была",nich,"раз(a)")
