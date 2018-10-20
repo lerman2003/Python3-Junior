@@ -1,0 +1,23 @@
+from random import randint
+prav=0
+ch=1
+
+for i in range(20):
+    ch2=randint(1,10)
+    print("Чему равно произведение чисел",ch,"и",ch2,"?")
+    otvet=int(input("Ответ: "))
+    proz = ch*ch2
+    if otvet==proz:
+        print("-----------")
+        print("Правильно!")
+        print("-----------")
+        prav+=1
+    if otvet!=proz:
+        print("-----------")
+        print("Не верно!")
+        print("Правильный ответ-",proz)
+        print("-----------")
+    ch+=1
+    if ch==11:
+        ch-=10
+print("Вы ответили правильно:",prav,"раз")
