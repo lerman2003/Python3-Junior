@@ -1,0 +1,30 @@
+from random import randint
+
+n=9
+prav=0
+noprav=0
+print("Правила")
+print("----------------")
+print("Вам нужно задать число 1 или 2")
+print("Если вы угодаете число которое задал компьютер, то вам балл")
+print("Побеждает тот кто наберет большее колличество баллов")
+print("----------------")
+
+for i in range(n):
+    while True:
+        bot = randint(1,2)
+        chislo = int(input("Введите число: "))
+        if chislo!=1 and chislo!=2:
+            print("Попробуйте ввести еще раз число 1 или 2")
+        if chislo==bot:
+            print("Угaдали")
+            prav+=1
+        if chislo!=bot:
+            print("Не угадали")
+            noprav+=1
+        break
+print("----------------")
+if prav>noprav:
+    print("Счет ",prav,":",noprav," в вашу пользу. Вы выиграли!",end="")
+if prav<noprav:
+    print("Счет ",noprav,":",prav," в пользу компьютера. Вы проиграли!",end="")
