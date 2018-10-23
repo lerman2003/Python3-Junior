@@ -1,0 +1,97 @@
+from random import randint
+import time
+
+igrok1 = input("Введите имя первого игрока ")
+igrok2 = input("Введите имя второго игрока ")
+
+time.sleep(3)
+
+nomer_masti_1 = randint(1,4)
+nomer_dost_1 = randint(6,14)
+
+if nomer_masti_1 == 1:
+    mast = 'пик'
+elif nomer_masti_1 == 2:
+    mast = 'треф'
+elif nomer_masti_1 == 3:
+    mast = 'бубен'
+else:
+    mast = 'червей'
+
+if nomer_dost_1 == 6:
+    dost = 'Шестерка'
+elif nomer_dost_1 == 7:
+    dost = 'Семерка'
+elif nomer_dost_1 == 8:
+    dost = 'Восьмерка'
+elif nomer_dost_1 == 9:
+    dost = 'Девятка'
+elif nomer_dost_1 == 10:
+    dost = 'Десятка'
+elif nomer_dost_1 == 11:
+    dost = 'Валет'
+elif nomer_dost_1 == 12:
+    dost = 'Дама'
+elif nomer_dost_1 == 13:
+    dost = 'Король'
+elif nomer_dost_1 == 14:
+    dost = 'Туз'
+
+print(igrok1, "- выпала карта: ", dost, mast)
+
+time.sleep(3)
+
+nomer_masti_2 = randint(1,4)
+nomer_dost_2 = randint(6,14)
+
+if nomer_masti_2 == 1:
+    mast = 'пик'
+elif nomer_masti_2 == 2:
+    mast = 'треф'
+elif nomer_masti_2 == 3:
+    mast = 'бубен'
+else:
+    mast = 'червей'
+
+if nomer_dost_2 == 6:
+    dost = 'Шестерка'
+elif nomer_dost_2 == 7:
+    dost = 'Семерка'
+elif nomer_dost_2 == 8:
+    dost = 'Восьмерка'
+elif nomer_dost_2 == 9:
+    dost = 'Девятка'
+elif nomer_dost_2 == 10:
+    dost = 'Десятка'
+elif nomer_dost_2 == 11:
+    dost = 'Валет'
+elif nomer_dost_2 == 12:
+    dost = 'Дама'
+elif nomer_dost_2 == 13:
+    dost = 'Король'
+elif nomer_dost_2 == 14:
+    dost = 'Туз'
+    
+print(igrok2, "- выпала карта: ", dost, mast)
+
+time.sleep(3)
+
+if nomer_masti_1>nomer_masti_2:
+    print("Выиграл ", igrok1)
+elif nomer_masti_2>nomer_masti_1:
+    print("Выиграл ", igrok2)
+else:
+    if nomer_dost_1>nomer_dost_2:
+        print("Выиграл ", igrok1)
+    elif nomer_dost_2>nomer_dost_1:
+        print("Выиграл ", igrok2)
+    else:
+        print("Ничья!!!")
+
+
+
+
+
+    
+
+
