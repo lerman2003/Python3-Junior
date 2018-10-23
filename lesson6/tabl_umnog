@@ -1,0 +1,26 @@
+from random import randint
+
+vopros = 20
+prav = 0
+
+for k in range(vopros):
+    
+    mnog1 = randint(0,9)
+    mnog2 = randint(0,9)
+
+    primer = mnog1*mnog2
+
+    print('Сколько будет ', mnog1,'* ',mnog2, ' = ')
+
+    otvet = int(input('Ваш ответ: '))
+
+    if primer == otvet:
+        print('Это правильный ответ!')
+        prav +=1
+    else:
+        print('Это неправильный ответ!')
+    print("")   
+    k+=1
+
+print("")
+print('Вы ответили правильно на ', prav, 'из ', k, ' вопросов')
