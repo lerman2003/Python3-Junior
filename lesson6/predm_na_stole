@@ -1,0 +1,63 @@
+from random import randint
+import time
+
+n = randint(15,25)
+print('Всего', n, 'предметов')
+
+k = randint(3,5)
+print()
+print('Брать можно не более', k, 'предметов')
+
+time.sleep(3)
+print("")
+
+ocher = randint(1, 2)
+if ocher == 1:
+    print('Начинает компьютер')
+else:
+    print('Начинаете вы')
+
+time.sleep(3)
+print("")
+
+while True:
+    
+    if ocher == 1:
+        
+        if n >= k:
+            skolko1 = randint(1, k)
+        else:
+            skolko1 = randint(1, n) 
+
+        print('Компьютер взял', skolko1)
+        n = n - skolko1
+         
+    else:
+        skolko2 = int(input('Сколько Вы берете? '))
+        n = n - skolko2
+            
+    print("")
+    print('Осталось ',n,' предметов')
+
+    if n != 0:  
+
+        if ocher == 1:
+            ocher = 2
+            print("Ваш ход:")
+        else:
+            ocher = 1
+            print("Ход компьютера: ")
+
+    else:
+        print("")
+        print("Игра окончена")
+
+        if ocher == 2:
+            print('Последний предмет взяли Вы, то есть выиграл компьютер!')
+        else:
+            print('Последний предмет взял компьютер, то есть Вы выиграли - поздравляем!')
+        break
+
+    
+
+    
