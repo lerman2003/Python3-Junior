@@ -1,8 +1,11 @@
-print("8 7 6 5 4 3 2 1")
-print("8 7 6 5 4 3 2")
-print("8 7 6 5 4 3")
-print("8 7 6 5 4")
-print("8 7 6 5")
-print("8 7 6")
-print("8 7")
-print("8")
+p = 8
+e = 8
+l = 8
+for n in range(1,9):
+    for m in range(e):
+        print(p,end=" ")
+        p-=1
+    p+=l
+    e-=1
+    l-=1
+    print()
