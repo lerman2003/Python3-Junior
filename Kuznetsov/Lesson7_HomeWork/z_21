@@ -2,7 +2,7 @@ p = 1
 for n in range(1,10):
     for m in range(9):
         ans = n+p
-        print(n,"+",p,"=",ans,end=" ")
+        print(n,"+",p,"=",ans,end="    ")
         p+=1
     p-=9
     print()
