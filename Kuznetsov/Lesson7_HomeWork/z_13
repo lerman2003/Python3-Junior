@@ -1,0 +1,6 @@
+p = 21
+for n in range(1,6):
+    for m in range(n):
+        print(p,end = " ")
+    p+=1
+    print()
