@@ -1,0 +1,8 @@
+p = 5
+e = 5
+for n in range(1,6):
+    for m in range(e):
+        print(p,end = " ")
+    p+=1
+    e-=1
+    print()
