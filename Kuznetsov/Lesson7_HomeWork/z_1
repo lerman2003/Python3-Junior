@@ -1,0 +1,11 @@
+from random import randint
+pip = 12
+a = "_" *4
+n=1
+print(a,"_1","_2","_3_",sep = "|", end = '|\n')
+for i in range(12):
+    otm = randint(2,5)
+    otm2 = randint(2,5)
+    otm3 = randint(2,5)
+    print(a,n,otm,otm2,otm3,sep = "| ",end="|\n")
+    n+=1
