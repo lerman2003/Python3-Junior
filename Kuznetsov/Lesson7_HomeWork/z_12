@@ -1,0 +1,7 @@
+a = 3
+p = 3
+for i in range(4):
+    k = str(a)
+    print(k*p,end="\n")
+    p+=1
+    a+=1
