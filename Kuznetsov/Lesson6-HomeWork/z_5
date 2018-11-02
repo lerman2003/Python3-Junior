@@ -1,0 +1,78 @@
+from random import randint
+import time
+
+pred=randint(15,25)
+print("на столе",pred,"предметов")
+
+k=randint(3,5)
+print("Максимально можно вычитать число:",k)
+
+ocher=randint(1,2)
+
+if ocher==1:
+    while True:
+        print("ходит бот")
+        if pred>=k:
+            chi=randint(1,k)
+            time.sleep(2)
+            print("Он отнял число: ",chi)
+            pred-=chi
+        else:
+            chi=randint(1,pred)
+            time.sleep(2)
+            print("Он отнял число: ",chi)
+            pred-=chi
+        print("Осталось:",pred)
+        print("------------")
+        if pred<=0:
+          print("Вы выиграли, бот сделал последний ход")
+          break
+        
+        
+        print("Ваш ход")
+        chi2=int(input("Ваше число: "))
+        while True:
+            if 1<=chi2<=k:
+                break
+            else:
+                chi2=int(input("Введите число еще раз! "))
+            
+        pred-=chi2
+        print("Осталось:",pred)
+        print("------------")
+        if pred<=0:
+            print("Ваш ход был последним, вы проиграли")
+            break
+        
+if ocher==2:
+    while True:
+        print("Ваш ход")
+        chi2=int(input("Ваше число: "))
+        while True:
+            if 1<=chi2<=k:
+                break
+            else:
+                chi2=int(input("Введите число еще раз! "))
+        pred-=chi2
+        print("Осталось:",pred)
+        print("------------")
+        if pred<=0:
+            print("Ваш ход был последним, вы проиграли")
+            break
+
+        print("ходит бот")
+        if pred>=k:
+            chi=randint(1,k)
+            time.sleep(2)
+            print("Он отнял число: ",chi)
+            pred-=chi
+        else:
+            chi=randint(1,pred)
+            time.sleep(2)
+            print("Он отнял число: ",chi)
+            pred-=chi
+        print("Осталось:",pred)
+        print("------------")
+        if pred<=0:
+          print("Вы выиграли, бот сделал последний ход")
+          break
