@@ -1,4 +1,8 @@
-for n in range(4):
-    for m in range(6):
-        print(5, end = ' ')
-    print()
+#Дано натуральное число. Вывести его цифры в “столбик”
+
+n = int(input('Введите натуральное число '))
+while n > 0:
+    posl = n % 10
+    print(posl)
+    n = n//10
+    
