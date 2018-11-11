@@ -1,0 +1,10 @@
+k = 10000000
+n = int(input("Введите натуральное число (до 10 млн) "))
+while n > 0:
+    if k<n:
+        first = n//k
+        print("%.0f"%first)
+        n=n%k
+        k/=10
+    else:
+        k/=10
