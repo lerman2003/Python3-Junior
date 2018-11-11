@@ -1,0 +1,20 @@
+n=int(input("Введите натуральное число: "))
+Max=-1
+sumch=0
+five = 0
+r=100
+
+while n>0:
+    g=n//r
+    if g%2==0:
+        sumch+=g
+    if g%2==1 and g>Max:
+        Max=g
+    if g>5:
+        five+=1
+    n%=r
+    r/=10
+    
+print("Сумма четных чисел:%.0f"%sumch)
+print("Колличество чисел больше пяти:%.0f"%five)
+print("Максимальное нечетное число:%.0f"%Max)
