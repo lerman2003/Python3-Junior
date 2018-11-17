@@ -1,0 +1,17 @@
+from random import randint
+m = int(input("Сколько мальчиков в классе?: "))
+g = int(input("Сколько девочек в классе?: "))
+sr=0
+su=0
+for i in range(m):
+    rost=randint(155,180)
+    su+=rost
+sr=su/m
+print("Средний рост мальчиков:%.0f"%sr,"см.")
+sr=0
+su=0
+for i in range(g):
+    rost=randint(155,172)
+    su+=rost
+sr=su/g
+print("Средний рост девочек:%.0f"%sr,"см.")
