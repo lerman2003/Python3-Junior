@@ -1,3 +1,4 @@
-n="15 14 13 12 11 10 9 8 7 6 5 4 3"
 for i in range(4):
-    print(n,end="\n")
+    for p in range(15,2,-1):
+        print(p,end=" ")
+    print()
