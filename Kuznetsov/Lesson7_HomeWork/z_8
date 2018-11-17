@@ -1,5 +1,4 @@
-r = 6
-n ="0"
-for i in range(5):
-    print(n*r)
-    r-=1
+for i in range(6,1,-1):
+    for p in range(i):
+        print(0,end=" ")
+    print()
