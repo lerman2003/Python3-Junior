@@ -1,0 +1,9 @@
+from random import randint
+f = 0
+p = int(input("Введите колличество чисел в наборе "))
+for i in range(p):
+    f=randint(1,1000)
+    if f%2==0:
+        print("Есть четное число")
+        f+=1
+        break
