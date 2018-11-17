@@ -1,0 +1,19 @@
+from random import randint
+import time
+print("Подождите")
+for i in range(4):
+    time.sleep(0.5)
+    print(".",end="")
+print()
+
+z = 0
+Min=30
+Min2=0
+z2=0
+for i in range(1,32):
+    t = randint(15,27)
+    if t<Min:
+        z2=z
+        Min=t
+        z=i
+print("Самыe холодныe дни в июле:",z2,"и",z)
