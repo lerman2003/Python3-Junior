@@ -1,0 +1,10 @@
+from random import randint
+t=0
+g=0
+c = int(input("введите сколько чисел должно сгенерироваться: "))
+for i in range(c):
+    t=randint(1,1000)
+    if t%10==0:
+        g+=t
+    t=0
+print("Сумма чисел оканчивающиеся на 0:",g)
