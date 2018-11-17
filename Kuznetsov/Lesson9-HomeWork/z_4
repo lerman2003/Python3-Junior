@@ -1,0 +1,8 @@
+from random import randint
+col = int(input("Сколько человек в классе?: "))
+r = 0
+for i in range(col):
+    f=randint(2,5)
+    if f==5:
+        r+=1
+print("Колличество учеников получившие 5:",r,"человек")
