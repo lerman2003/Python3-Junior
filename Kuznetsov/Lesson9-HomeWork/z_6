@@ -1,0 +1,23 @@
+from random import randint
+import time
+print("Подождите")
+for i in range(4):
+    time.sleep(0.5)
+    print(".",end="")
+print()
+ch=0
+col=0
+nech=0
+col2=0
+for i in range(12):
+    p=randint(1,100)
+    if p%2==0:
+        ch+=p
+        col+=1
+    if p%2==1:
+        nech+=p
+        col2+=1
+sr1=ch/col
+sr2=nech/col2
+print("Среднее арифметическое четных чисел:%.0f"%sr1)
+print("Среднее арифметическое нечетных чисел:%.0f"%sr2)
