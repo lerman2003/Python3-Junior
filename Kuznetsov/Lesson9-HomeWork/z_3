@@ -1,0 +1,14 @@
+from random import randint
+import time
+y=0
+
+for i in range(12):
+    f = randint(140,185)
+    if f<165:
+        y+=1
+print("Пожалуйста подождите")
+for p in range(1,4):
+    time.sleep(1)
+    print('.',end="")
+print()
+print("Колличество юношей меьше 165 см.:",y)
