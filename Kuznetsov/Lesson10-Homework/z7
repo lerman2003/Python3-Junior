@@ -1,0 +1,12 @@
+st = input("Введите слово: ")
+ka = 0
+ko = 0
+for i in range(len(st)-1):
+    if i==",":
+        ka+=1
+    if st[i].isdigit():
+        ko+=1
+if ka>ko:
+    print("Больше запятых")
+else:
+    print("Больше цифр")
