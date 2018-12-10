@@ -1,0 +1,7 @@
+st = input("Введите слово: ")
+prop = st.find(" ")
+
+if st[prop].isdigit():
+    print("Есть цифра после пробела")
+else:
+    print("Нет цифры после пробела")
