@@ -1,0 +1,4 @@
+st = input("Введите строку: ")
+
+a = st.find(" ")
+print(st[0:a])
