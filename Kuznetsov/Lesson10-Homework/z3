@@ -1,0 +1,12 @@
+st = input("Введите слово: ")
+ka = 0
+ko = 0
+for i in range(len(st)-1):
+    if i=="а":
+        ka+=1
+    if i=="о":
+        ko+=1
+if ka>ko:
+    print("Больше букв а")
+else:
+    print("Больше букв о")
