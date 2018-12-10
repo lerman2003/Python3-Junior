@@ -1,0 +1,7 @@
+st = input("Введите слово: ")
+a = st.find("н")
+b = st.find("к")
+if a<b:
+    print("Н первая буква")
+else:
+    print("К первая буква")
