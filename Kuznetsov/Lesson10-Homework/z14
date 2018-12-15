@@ -1,0 +1,12 @@
+st = input("Введите строку: ")
+slovo = ""
+k = 0
+for i in range(0,len(st)):
+    if st[i]!=" " and k<6:
+        slovo+=st[i]
+    elif st[i]==" " and k<6:
+        print(slovo)
+        slovo = ""
+        k+=1
+    elif k==7:
+        break
