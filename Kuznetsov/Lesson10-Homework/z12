@@ -1,0 +1,13 @@
+st = input("Введите строку: ")
+st = st.replace("  "," ")
+slovo = ""
+k = 1
+for i in range(0,len(st)):
+    if st[i]!=" " and k<4:
+        slovo+=st[i]
+    elif st[i]==" " and k<4:
+        print(slovo)
+        slovo = ""
+        k+=1
+    elif k==4:
+        break
