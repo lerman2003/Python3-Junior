@@ -1,0 +1,9 @@
+st = input("Введите строку: ")
+slovo=""
+for i in range(len(st)):
+    if st[i]=='\':
+        print(slovo)
+        slovo=""
+    slovo+=st[i]
+print(slovo)
+#Эту программу не получилось сделать из за символа \, я пробовал использовать replace что бы заменить его на /, но это не помогло
