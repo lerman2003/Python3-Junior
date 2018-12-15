@@ -1,0 +1,20 @@
+st = input("Введите строку: ")
+slovo=""
+ch = 0
+k=1
+Max = -1
+s = 0
+spek = ""
+for i in range(len(st)):
+    if st[i]!=" ":
+        slovo+=st[i]
+        ch+=1
+    else:
+        slovo = ""
+        ch=0
+        k+=1
+    if Max<ch:
+        Max=ch
+        s = k
+        spek = slovo
+print("Самое длинное слово под номером",s,"(",spek,")")
