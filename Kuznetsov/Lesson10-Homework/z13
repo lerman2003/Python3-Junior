@@ -1,0 +1,10 @@
+st = input("Введите строку: ")
+r = st.rfind(" ")
+r+=1
+print(st[r:len(st)])
+r-=1
+st = st.replace(st[r:len(st)-1],"")
+st= st.rstrip()
+r = st.rfind(" ")
+r+=1
+print(st[r:len(st)-1])
