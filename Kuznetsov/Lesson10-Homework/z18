@@ -1,0 +1,3 @@
+st = input("Введите строку: ")
+st = st.replace(" ","")
+print(st)
