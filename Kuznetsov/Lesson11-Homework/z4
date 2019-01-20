@@ -1,0 +1,5 @@
+from random import randint
+a = [i for i in range(1,26)]
+a.append(100)
+a.append(200)
+print(a)
