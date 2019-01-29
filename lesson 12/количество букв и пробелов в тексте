@@ -1,0 +1,15 @@
+
+#Ввод текста
+text = input('Введите текст ')
+#Создание и заполнение словаря
+D = {}
+for c in text:
+    if c in D:
+        D[c] = D[c] + 1
+    else:
+        D[c] = 1
+
+for k in D:
+    print(k, D[k],sep = '-')
+print()
+print(D)
