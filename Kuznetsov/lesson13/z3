@@ -1,0 +1,8 @@
+import math
+def F(a,b):
+    w = math.sqrt(a)+a
+    ot = w/b
+    return ot
+
+x = F(6,2)+F(13,2)+F(21,2)
+print(x)
