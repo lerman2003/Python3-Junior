@@ -1,0 +1,4 @@
+def e():
+    for i in range(20):
+        print("*"*60)
+e()
