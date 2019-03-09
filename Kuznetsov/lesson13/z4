@@ -1,0 +1,7 @@
+f = open("vau.txt","w")
+for i in range(10):
+    a = input("Введите название города: ")
+    f.write(a+"\n")
+    print(i+1,"из 10")
+print("Все города записаны в файл")
+f.close()
