@@ -1,46 +1,7 @@
-import turtle
-def M():
-    turtle.down()
-    turtle.left(90)
-    turtle.forward(100)
-    turtle.right(150)
-    turtle.forward(70)
-    turtle.left(120)
-    turtle.forward(70)
-    turtle.left(30)
-    turtle.backward(100)
-
-def K():
-    turtle.down()
-    turtle.forward(50)
-    turtle.left(90)
-    turtle.forward(50)
-    turtle.left(90)
-    turtle.forward(50)
-    turtle.left(90)
-    turtle.forward(50)
-    turtle.left(90)
-    turtle.forward(50)
-    turtle.left(90)
-    turtle.forward(25)
-    turtle.right(90)
-    turtle.forward(50)
-    turtle.left(90)
-    turtle.forward(25)
-    turtle.left(90)
-    turtle.forward(50)
-        
-turtle.reset()
-turtle.up()
-turtle.goto(-100,0)
-M()
-
-turtle.up()
-turtle.goto(50,0)
-K()
-
-turtle.up()
-turtle.left(90)
-turtle.goto(-100,-20)
-turtle.down()
-turtle.forward(200)
+f = open("vau.txt","w")
+d = input("Введите любой порядок символов: ")
+for i in range(len(d),0,-1):
+    k = d[i-1]
+    f.write(k+"\n")
+    print(k)
+f.close()
