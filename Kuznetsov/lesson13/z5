@@ -1,0 +1,12 @@
+from random import randint
+f = open("vau.txt","w")
+e = []
+
+for i in range(20):
+    e.append(randint(-20,20))
+print(e)
+for i in range(20):
+    if e[i]<0:
+        f.write(str(e[i])+"\n")
+        print(e[i])
+f.close()
