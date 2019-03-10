@@ -1,0 +1,37 @@
+#a
+f = open("vau.txt","r")
+k = 0
+for el in f:
+    e = el.strip()
+    print(e)
+    if "." in e:
+        k+=1
+print("количество строк, оканчивающихся точкой:",k)
+f.close()
+
+#б
+f = open("vau.txt","r")
+k = 0
+i = 0
+for el in f:
+    e = el.strip()
+    for u in e:
+        if u==" ":
+            k+=1
+    k+=1
+    if k>i:
+        i==k
+    k=0
+print("Максимаьное число слов на одной строчке:",i)
+f.close()
+
+#в
+f = open("vau.txt","r")
+for el in f:
+    e = el.strip()
+        for up in e:
+            if up==" ":
+            k+=1
+    k+=1
+print("Общее количество слов в файле:",k)
+f.close()
