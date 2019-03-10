@@ -1,0 +1,82 @@
+#a
+f = open("vau.txt","r")
+q = 0
+h = 0
+for el in f:
+    e = el.strip()
+    q += len(e)
+    print(e)
+    h+=1
+sr = q/h
+print("Средняя длина слова: %.1f"%sr)
+f.close()
+
+#б
+f = open("vau.txt","r")
+k = 0
+for el in f:
+    e = el.strip()
+    if len(e)>5:
+        k+=1
+print("Количество слов больше пяти:",k)
+f.close()
+
+#в
+f = open("vau.txt","r")
+u = 1000
+for el in f:
+    e = el.strip()
+    if len(e)<u:
+        u=len(e)
+print("Количество букв в самом маленьком слове:",u)
+f.close()
+
+#г
+f = open("vau.txt","r")
+u = -1
+k = 0
+p = 0
+for el in f:
+    p+=1
+    e = el.strip()
+    if len(e)>u:
+        k=p
+        u = len(e)
+print("Номер строки на которой находиться первое самое большое слово:",k)
+f.close()
+
+#д
+f = open("vau.txt","r")
+t = 0
+t2 = -1
+for el in f:
+    e = el.strip()
+    if len(e)>t:
+        t2 = t
+        t = len(e)
+print("количество символов в слове, больше которого только в самом длинном слове:",t2)
+f.close()
+
+#е
+f = open("vau.txt","r")
+p = 0
+for el in f:
+    e = el.strip()
+    if e[0]=="м" or e[0]=="М":
+        p+=1
+print("Количество слов начинающихся на м:",p)
+f.close()
+
+#ж
+f = open("vau.txt","r")
+i = input("Введите слово, что бы узнать есть ли оно в файле: ")
+j=0
+for el in f:
+    e = el.strip()
+    if e==i:
+        print("Это слово есть в файле")
+        j+=1
+        break
+if j==0:
+    print("Этого слова нету в файле(")
+f.close()
