@@ -1,0 +1,79 @@
+#а
+f = open("vau.txt","r")
+k = 0
+for el in f:
+    e = el.strip()
+    k += int(e)
+print("Сумма всех чисел:",k)
+f.close()
+
+#б
+f = open("vau.txt","r")
+k = 0
+y = 0
+for el in f:
+    e = el.strip()
+    k += int(e)
+    y += 1
+sr = k/y
+print("Среднее арифметическое чисел:%.2f"%sr)
+f.close()
+
+#в
+f = open("vau.txt","r")
+u = 0
+k = 0
+for el in f:
+    e = el.strip()
+    u+=1
+    if u%2==0:
+        k+=int(e)
+print("сумма чисел, записанные на 2-й, 4-й, 6-й, … строках:",k)
+f.close()
+
+#г
+f = open("vau.txt","r")
+k = 0
+for el in f:
+    e = el.strip()
+    if int(e)%2==0:
+        k+=1
+print("Количество четных чисел:",k)
+f.close()
+
+#e
+f = open("vau.txt","r")
+k = 0
+for el in f:
+    e = el.strip()
+    if int(e)>k:
+        k=int(e)
+print("Самое большое число в файле:",k)
+f.close()
+
+#ж
+f = open("vau.txt","r")
+u=100
+k = 0
+i = 0
+for el in f:
+    e = el.strip()
+    k +=1
+    if int(e)<u:
+        u=int(e)
+        i=k
+print("номер строки, в которой записано первое минимальное число файла:",i)
+f.close()
+
+#з
+f = open("vau.txt","r")
+o = int(input("Введите число, что бы узнать, есть ли оно в файле: "))
+k=0
+for el in f:
+    e = el.strip()
+    if int(e)==o:
+        print("Введенное вами число есть в файле")
+        k+=1
+if k == 0:
+    print("Введенного вам числа нет в файле")
+f.close()
