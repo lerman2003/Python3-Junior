@@ -1,0 +1,61 @@
+from tkinter import *
+
+def Vah(event):
+    root.destroy()
+def Chet(event):
+    a1 = float(a.get())
+    b1 = float(b.get())
+    if calc.get()==1:
+        o=a1+b1
+    elif calc.get()==3:
+        o=a1-b1
+    elif  calc.get()==4:
+        o=a1/b1
+        o = str("{:.2f}".format(o))
+    else:
+        o=a1*b1
+
+    ot_1.delete(0,END)
+    ot_1.insert(0,o)
+    
+root=Tk()
+root.geometry('210x150')
+root.title("Калькулятор")
+
+a = StringVar()
+b = StringVar()
+o = StringVar()
+calc = IntVar()
+calc.set(1)
+
+t1 = Label(root,text="Введите 1 число",font = "Arial 10")
+tv1 = Entry(root,width=10,textvariable=a)
+t2 = Label(root,text="Введите 2 число",font = "Arial 10")
+tv2 = Entry(root,width=10,textvariable=b)
+ot = Label(root,text="Ответ",font = "Arial 10")
+ot_1= Entry(root,width=10,textvariable=o)
+
+plus = Radiobutton(root,text="Сложение",font = "Arial 10",value = 1,variable = calc)
+vech = Radiobutton(root,text="Вычитание",font = "Arial 10",value = 3,variable = calc)
+um = Radiobutton(root,text="Умножение",font = "Arial 10",value = 2,variable = calc)
+de = Radiobutton(root,text="Деление",font = "Arial 10",value = 4,variable = calc)
+rach = Button(root,text="Расчёт",font = "Arial 10")
+ex = Button(root,text="Выход",font = "Arial 10")
+
+t1.place(x=10,y=10)
+tv1.place(x=120,y=10)
+t2.place(x=10,y=30)
+tv2.place(x=120,y=30)
+ot.place(x=75,y=50)
+ot_1.place(x=120,y=50)
+rach.place(x=30,y=110)
+ex.place(x=100,y=110)
+plus.place(x=10,y=70)
+vech.place(x=10,y=90)
+um.place(x=100,y=70)
+de.place(x=100,y=90)
+
+ex.bind("<Button-1>",Vah)
+rach.bind("<Button-1>",Chet)
+
+root.mainloop()
