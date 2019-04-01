@@ -1,0 +1,81 @@
+from tkinter import *
+
+def vax(event):
+    root.destroy()
+
+def rak(event):
+    otvet=0
+    if fl1.get()==1:
+        otvet+=1500
+    if fl2.get()==1:
+        otvet+=3000
+    if fl3.get()==1:
+        otvet+=100
+    if fl4.get()==1:
+        otvet+=350
+    if fl5.get()==1:
+        otvet+=999
+    if fl6.get()==1:
+        otvet+=1200
+    if fl7.get()==1:
+        otvet+=499
+    if fl8.get()==1:
+        otvet+=100
+    if fl9.get()==1:
+        otvet+=600
+    rach_1.delete(0,END)
+    rach_1.insert(0,otvet)
+root = Tk()
+root.title("меню студента")
+root.geometry("300x470")
+root.resizable(False,False)
+
+fl1 = IntVar()
+fl2 = IntVar()
+fl3 = IntVar()
+fl4 = IntVar()
+fl5 = IntVar()
+fl6 = IntVar()
+fl7 = IntVar()
+fl8 = IntVar()
+fl9 = IntVar()
+su = IntVar() 
+
+tx = Label(root,text = "Твердая еда")
+fl_1 = Checkbutton(root,text="Говяжий стейк..........1500",onvalue = 1,offvalue = 0,variable=fl1,bg = "white")
+fl_2 = Checkbutton(root,text="Тушенная фуагра........3000",onvalue = 1,offvalue = 0,variable=fl2,bg = "blue")
+fl_3 = Checkbutton(root,text="Картошка жаренная......100",onvalue = 1,offvalue = 0,variable=fl3,bg = "red")
+            
+tx2 = Label(root,text = "Мягкая еда")
+fl_4 = Checkbutton(root,text="Борщ...................350",onvalue = 1,offvalue = 0,variable=fl4,bg = "white")
+fl_5 = Checkbutton(root,text="Бабушкин Суп...........999",onvalue = 1,offvalue = 0,variable=fl5,bg = "blue")
+fl_6 = Checkbutton(root,text="Расольник..............1200",onvalue = 1,offvalue = 0,variable=fl6,bg = "red")
+tx3 = Label(root,text = "Жидкость")
+            
+fl_7 = Checkbutton(root,text="Вода...................499",onvalue = 1,offvalue = 0,variable=fl7,bg = "white")
+fl_8 = Checkbutton(root,text="Чай....................100",onvalue = 1,offvalue = 0,variable=fl8,bg = "blue")
+fl_9 = Checkbutton(root,text="Кола...................600",onvalue = 1,offvalue = 0,variable=fl9,bg = "red")
+per = Radiobutton(root,text="Да",value=0,variable=otv)
+rach_1 = Entry(root,text="Итог",textvariable=su,width=10)
+rach = Button(root,text="Итог",width = 10)
+ex = Button(root,text = "Выход",width = 10)
+
+
+tx.place(x=10,y=10)
+fl_1.place(x=10,y=40)
+fl_2.place(x=10,y=60)
+fl_3.place(x=10,y=80)            
+tx2.place(x=10,y=110)
+fl_4.place(x=10,y=140)
+fl_5.place(x=10,y=160)
+fl_6.place(x=10,y=180)
+tx3.place(x=10,y=220)
+fl_7.place(x=10,y=260)
+fl_8.place(x=10,y=280)
+fl_9.place(x=10,y=300)
+rach.place(x=10,y=370)
+rach_1.place(x=120,y=370)
+ex.place(x=190,y=370)
+ex.bind("<Button-1>",vax)
+rach.bind("<Button-1>",rak)
+root.mainloop()
