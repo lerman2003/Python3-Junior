@@ -5,6 +5,7 @@ def vax(event):
 
 def rak(event):
     otvet=0
+    t = 0
     if fl1.get()==1:
         otvet+=1500
     if fl2.get()==1:
@@ -23,8 +24,15 @@ def rak(event):
         otvet+=100
     if fl9.get()==1:
         otvet+=600
+    if otv.get() == 0:
+        t=otvet/100*7
+        otvet+=otvet/100*7
+    t = str("{:.2f}".format(t))
+    otvet = str("{:.2f}".format(otvet))
     rach_1.delete(0,END)
     rach_1.insert(0,otvet)
+    tea_2.delete(0,END)
+    tea_2.insert(0,t)
 root = Tk()
 root.title("меню студента")
 root.geometry("300x470")
@@ -39,25 +47,34 @@ fl6 = IntVar()
 fl7 = IntVar()
 fl8 = IntVar()
 fl9 = IntVar()
-su = IntVar() 
+otv = IntVar()
+su = IntVar()
+tea_ = IntVar()
+t = IntVar()
 
 tx = Label(root,text = "Твердая еда")
-fl_1 = Checkbutton(root,text="Говяжий стейк..........1500",onvalue = 1,offvalue = 0,variable=fl1,bg = "white")
-fl_2 = Checkbutton(root,text="Тушенная фуагра........3000",onvalue = 1,offvalue = 0,variable=fl2,bg = "blue")
-fl_3 = Checkbutton(root,text="Картошка жаренная......100",onvalue = 1,offvalue = 0,variable=fl3,bg = "red")
+fl_1 = Checkbutton(root,text="Говяжий стейк..........1500",onvalue = 1,offvalue = 0,variable=fl1)
+fl_2 = Checkbutton(root,text="Тушенная фуагра........3000",onvalue = 1,offvalue = 0,variable=fl2)
+fl_3 = Checkbutton(root,text="Картошка жаренная......100",onvalue = 1,offvalue = 0,variable=fl3)
             
 tx2 = Label(root,text = "Мягкая еда")
-fl_4 = Checkbutton(root,text="Борщ...................350",onvalue = 1,offvalue = 0,variable=fl4,bg = "white")
-fl_5 = Checkbutton(root,text="Бабушкин Суп...........999",onvalue = 1,offvalue = 0,variable=fl5,bg = "blue")
-fl_6 = Checkbutton(root,text="Расольник..............1200",onvalue = 1,offvalue = 0,variable=fl6,bg = "red")
+fl_4 = Checkbutton(root,text="Борщ...................350",onvalue = 1,offvalue = 0,variable=fl4)
+fl_5 = Checkbutton(root,text="Бабушкин Суп...........999",onvalue = 1,offvalue = 0,variable=fl5)
+fl_6 = Checkbutton(root,text="Расольник..............1200",onvalue = 1,offvalue = 0,variable=fl6)
 tx3 = Label(root,text = "Жидкость")
             
-fl_7 = Checkbutton(root,text="Вода...................499",onvalue = 1,offvalue = 0,variable=fl7,bg = "white")
-fl_8 = Checkbutton(root,text="Чай....................100",onvalue = 1,offvalue = 0,variable=fl8,bg = "blue")
-fl_9 = Checkbutton(root,text="Кола...................600",onvalue = 1,offvalue = 0,variable=fl9,bg = "red")
+fl_7 = Checkbutton(root,text="Вода...................499",onvalue = 1,offvalue = 0,variable=fl7)
+fl_8 = Checkbutton(root,text="Чай....................100",onvalue = 1,offvalue = 0,variable=fl8)
+fl_9 = Checkbutton(root,text="Кола...................600",onvalue = 1,offvalue = 0,variable=fl9)
+
+text = Label(root,text = "Чаевые(7%)")
+itog = Label(root,text = "Итог:")
+tea = Label(root,text = "Чай:")
 per = Radiobutton(root,text="Да",value=0,variable=otv)
-rach_1 = Entry(root,text="Итог",textvariable=su,width=10)
-rach = Button(root,text="Итог",width = 10)
+per2 = Radiobutton(root,text="Нет",value=1,variable=otv)
+rach_1 = Entry(root,textvariable=su,width=10)
+tea_2 = Entry(root,textvariable=tea_,width=10)
+rach = Button(root,text="Расчет",width = 10)
 ex = Button(root,text = "Выход",width = 10)
 
 
@@ -73,9 +90,17 @@ tx3.place(x=10,y=220)
 fl_7.place(x=10,y=260)
 fl_8.place(x=10,y=280)
 fl_9.place(x=10,y=300)
+text.place(x=10,y=330)
+per.place(x=80,y=330)
+per2.place(x=120,y=330)
+
+
 rach.place(x=10,y=370)
-rach_1.place(x=120,y=370)
-ex.place(x=190,y=370)
+tea.place(x=100,y=370)
+itog.place(x=100,y=400)
+rach_1.place(x=140,y=400)
+tea_2.place(x=140,y=370)
+ex.place(x=10,y=400)
 ex.bind("<Button-1>",vax)
 rach.bind("<Button-1>",rak)
 root.mainloop()
