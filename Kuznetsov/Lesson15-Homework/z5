@@ -1,0 +1,45 @@
+from tkinter import Tk,Canvas,HIDDEN,NORMAL
+import random
+import time
+
+root = Tk()
+root.title = ("S9AP")
+c = Canvas(root,width=400,height=400)
+shapes=[]
+circle=c.create_oval(35,20,365,350,fill='black',outline='black',state=HIDDEN)
+shapes.append(circle)
+circle=c.create_oval(35,20,365,350,fill='yellow',outline='yellow',state=HIDDEN)
+shapes.append(circle)
+circle=c.create_oval(35,20,365,350,fill='indigo',outline='indigo',state=HIDDEN)
+shapes.append(circle)
+circle=c.create_oval(35,20,365,350,fill='purple',outline='purple',state=HIDDEN)
+shapes.append(circle)
+rectangle=c.create_rectangle(35,100,365,270,fill='black',outline='black',state=HIDDEN)
+shapes.append(rectangle)
+rectangle=c.create_rectangle(35,100,365,270,fill='yellow',outline='yellow',state=HIDDEN)
+shapes.append(rectangle)
+rectangle=c.create_rectangle(35,100,365,270,fill='indigo',outline='indigo',state=HIDDEN)
+shapes.append(rectangle)
+rectangle=c.create_rectangle(35,100,365,270,fill='purple',outline='purple',state=HIDDEN)
+shapes.append(rectangle)
+square=c.create_rectangle(35,20,365,350,fill='black',outline='black',state=HIDDEN)
+shapes.append(square)
+square=c.create_rectangle(35,20,365,350,fill='yellow',outline='yellow',state=HIDDEN)
+shapes.append(square)
+square=c.create_rectangle(35,20,365,350,fill='indigo',outline='indigo',state=HIDDEN)
+shapes.append(square)
+square=c.create_rectangle(35,20,365,350,fill='purple',outline='purple',state=HIDDEN)
+shapes.append(square)
+
+c.pack()
+random.shuffle(shapes)
+shape= None
+previsious_color=""
+current_color=""
+player1_score=0
+player2_score=0
+root.after(3000,next_shape)
+c.bind("q",snap)
+c.bind("p",snap)
+c.focus_set()
+root.mainloop()
