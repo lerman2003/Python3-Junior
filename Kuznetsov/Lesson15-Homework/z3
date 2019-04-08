@@ -1,0 +1,65 @@
+from tkinter import *
+
+def paint(event):
+    global brush_s
+    global color
+    x1 = event.x-brush_s
+    x2 = event.x+brush_s
+    y1 = event.y-brush_s
+    y2 = event.y+brush_s
+    c.create_oval(x1,y1,x2,y2,fill = color,outline=color)
+def brush_s_ch(new_size):
+    global brush_s
+    brush_s=new_size
+def color_ch(new_color):
+    global color
+    color=new_color
+def bg_ch(new_color):
+    c.configure(bg=new_color)
+def ex(event):
+    root.destroy()
+    
+canvas_w=700
+canvas_h=550
+brush_s = 3
+color = "black"
+
+root = Tk()
+root.title("VAH_3000")
+
+per=IntVar()
+per.set(10)
+c = Canvas(root,width=canvas_w,height=canvas_h,bg = "white")
+button3=Button(root,text="3",width=10,command=lambda:brush_s_ch(3))
+button5=Button(root,text="5",width=10,command=lambda:brush_s_ch(5))
+button10=Button(root,text="10",width=10,command=lambda:brush_s_ch(10))
+button25=Button(root,text="25",width=10,command=lambda:brush_s_ch(25))
+
+black_button=Button(root,text="Черный",width=10,command=lambda:color_ch('black'))
+red_button=Button(root,text="Красный",width=10,command=lambda:color_ch('red'))
+blue_button=Button(root,text="Синий",width=10,command=lambda:color_ch('blue'))
+white_button=Button(root,text="Белый",width=10,command=lambda:color_ch('white'))
+clear_button=Button(text="Стереть",width=10,command=lambda:c.delete("all"))
+bg_blue=Radiobutton(root,text="Синий",variable=per,value=2,command=lambda:bg_ch("blue"))
+bg_green=Radiobutton(root,text="Зеленый",variable=per,value=1,command=lambda:bg_ch("green"))
+bg_white=Radiobutton(root,text="Белый",variable=per,value=3,command=lambda:bg_ch("white"))
+
+
+
+
+c.grid(row=3,column=0,columnspan = 9,padx=5,pady=5,sticky=E+W+S+N)
+button3.grid(row=1,column=0)
+button5.grid(row=1,column=1)
+button10.grid(row=1,column=2)
+button25.grid(row=1,column=3)
+black_button.grid(row=0,column=0)
+red_button.grid(row=0,column=1)
+blue_button.grid(row=0,column=2)
+white_button.grid(row=0,column=3)
+bg_blue.grid(row=2,column=2)
+bg_green.grid(row=2,column=1)
+bg_white.grid(row=2,column=3)
+clear_button.grid(row=1,column=6)
+                    
+c.bind("<B1-Motion>",paint)
+root.mainloop()
